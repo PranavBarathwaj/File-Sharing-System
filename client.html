@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FSS</title>
+</head>
+
+<body>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        
+        body {
+            background-color: aquamarine;
+        }
+        
+        .button_css {
+            background-color: black;
+            color: white;
+            width: 80px;
+            height: 30px;
+        }
+        
+        .container {
+            height: 200px;
+            position: relative;
+        }
+    </style>
+    <h2>Connect to Server</h2>
+    <button class='button_css' onclick="main()">&lt; Go Back</button>
+    <br>
+    <table>
+        <tr>
+            <td><b>Server Name: </b></td>
+            <td><input type="text" name="serverName" id="serverName"></td><br>
+        </tr>
+        <tr>
+            <td><br><button class='button_css' onclick="clientConnect(document.getElementById('serverName').value)">Connect</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>

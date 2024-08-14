@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload a File</title>
+</head>
+
+<body>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        
+        body {
+            background-color: aquamarine;
+        }
+        
+        .button_css {
+            background-color: black;
+            color: white;
+            width: 100px;
+            height: 30px;
+        }
+        
+        .container {
+            height: 200px;
+            position: relative;
+        }
+    </style>
+    <form action="/uploadfile" method="post" enctype="multipart/form-data">
+        <b>File you would like to upload: </b><input type="file" name="file" id="file"><br><br>
+        <b>Paste the text you would like to share: </b><input type="text" name="clipboardInput" id="clipboardInput" value="{{.Clipboard}}"><br><br>
+        <button class='button_css' id="cpy"> Copy </button><br><br>
+        <input class='button_css' type="submit" value="Submit"><br>
+    </form>
+    <br><a href="/downloads/">Downloads</a>
+    <br><a href="/forgetMe">Exit this Server</a>
+</body>
+<script>
+    document.getElementById("cpy").addEventListener("click", (e) => {
+        e.preventDefault
+        e.returnValue = false
+        var copyText = document.getElementById("clipboardInput");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+    })
+</script>
+
+</html>

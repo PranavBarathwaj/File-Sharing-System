@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+        
+        .button_css {
+            background-color: black;
+            color: white;
+            width: 100px;
+            height: 30px;
+        }
+        
+        .container {
+            height: 200px;
+            position: relative;
+        }
+    </style>
+    <b><i>{{.Message}}</i></b><br><br>
+    <form action="/authenticate" method="post">
+        <b>Password: </b><input type="password" name="password" id="password"><br><br>
+        <input class='button_css' type="submit" value="Submit">
+    </form>
+    <br> {{.Notification}}
+</body>
+
+</html>

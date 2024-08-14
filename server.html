@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FSS</title>
+</head>
+
+<body>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        
+        body {
+            background-color: aquamarine;
+        }
+        
+        .button_css {
+            background-color: black;
+            color: white;
+            width: 100px;
+            height: 30px;
+        }
+        
+        .container {
+            height: 200px;
+            position: relative;
+        }
+    </style>
+    <h2>Create A Server</h2>
+    <button class='button_css' onclick="main()">&lt; Go Back</button>
+
+    <table>
+        <tr>
+            <td><br><b>Server Name: </b></td>
+            <td><br><input type="text" name="serverName" id="serverName"></td>
+        </tr>
+        <tr>
+            <td><b>Server Password: </b></td>
+            <td><input type="text" name="serverPassword" id="serverPassword"></td>
+        </tr>
+        <tr>
+            <td><br><button class='button_css' onclick="createServer(document.getElementById('serverName').value, document.getElementById('serverPassword').value)">Create Server</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>
